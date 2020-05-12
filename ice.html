@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Icy Tower</title>
+		<meta charset="UTF-8">
+		<style>
+		    * {
+		        margin: 0;
+		        padding: 0;
+		    }
+
+		    @font-face {
+				font-family: "dpcomic";
+				src: url("font/dpcomic.ttf");
+			}
+
+			body {
+				background: #111;
+			}
+		    
+		    .wrap {
+		        width: 400px;
+		        height: 600px;
+		        position: absolute;
+		        top: 0; left: 0;
+		        bottom: 0; right: 0;
+		        margin: auto;
+		        border-left: 5px solid #333;
+		        border-right: 5px solid #333;
+		    }
+
+		    #c1,
+		    #c2 {
+		    	position: absolute;
+		    	z-index: 1;
+		    }
+
+		    .text {
+		    	position: absolute;
+		    	width: 400px;
+		    	padding: 10px;
+		    	box-sizing: border-box;
+		    	font-family: "dpcomic";
+		    	font-size: 48px;	
+		    	text-align: center;
+		    	color: white;
+		    	z-index: 2;
+		    }
+
+		    #score { 
+		    	top: 0;   	
+		    }
+
+		    #over {
+		    	top: 200px;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<canvas id="c1" width="400" height="600"></canvas>
+			<canvas id="c2" width="400" height="600"></canvas>	
+			<div id="score" class="text">0</div>
+			<div id="over" class="text"></div>		
+		</div>
+
+		<script src="js/input.js"></script>
+		<script src="js/frame.js"></script>
+		<script src="js/player.js"></script>
+		<script src="js/wall.js"></script>
+		<script src="js/objects.js"></script>
+		<script src="js/render.js"></script>
+		<script src="js/physics.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/engine.js"></script>
+	</body>
+</html>
